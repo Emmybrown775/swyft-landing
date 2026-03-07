@@ -117,7 +117,8 @@ export default function LandingPage() {
 
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);
-    const onMouse = (e) => setMousePos({ x: e.clientX, y: e.clientY });
+    const onMouse = (e: MouseEvent) =>
+      setMousePos({ x: e.clientX, y: e.clientY });
     window.addEventListener("scroll", onScroll);
     window.addEventListener("mousemove", onMouse);
     return () => {
@@ -147,7 +148,7 @@ export default function LandingPage() {
 
       {/* ── NAV ── */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 h-[72px] transition-all duration-300 ${scrollY > 20 ? "bg-slate-50/92 backdrop-blur-xl border-b border-slate-200/80" : ""}`}
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 h-18 transition-all duration-300 ${scrollY > 20 ? "bg-slate-50/92 backdrop-blur-xl border-b border-slate-200/80" : ""}`}
       >
         <div className="flex items-center gap-2.5">
           <Image
@@ -188,7 +189,7 @@ export default function LandingPage() {
 
         {/* Green blob */}
         <div
-          className="absolute top-[10%] right-[5%] w-[500px] h-[500px] rounded-full pointer-events-none z-0 hidden lg:block"
+          className="absolute top-[10%] right-[5%] w-125 h-125 rounded-full pointer-events-none z-0 hidden lg:block"
           style={{
             background:
               "radial-gradient(circle,rgba(34,197,94,.1) 0%,transparent 70%)",
@@ -196,7 +197,7 @@ export default function LandingPage() {
           }}
         />
         <div
-          className="absolute bottom-[10%] left-[5%] w-[300px] h-[300px] rounded-full pointer-events-none z-0 hidden lg:block"
+          className="absolute bottom-[10%] left-[5%] w-75 h-75 rounded-full pointer-events-none z-0 hidden lg:block"
           style={{
             background:
               "radial-gradient(circle,rgba(16,185,129,.08) 0%,transparent 70%)",
@@ -248,8 +249,8 @@ export default function LandingPage() {
             </h1>
 
             <p className="anim-slide-3 text-slate-500 text-lg leading-relaxed mb-4 max-w-lg">
-              Swyft is Port Harcourt's electric bicycle delivery service built
-              for{" "}
+              Swyft is Port Harcourt&apos;s electric bicycle delivery service
+              built for{" "}
               <strong className="text-slate-700 font-semibold">
                 SMEs and startups
               </strong>
@@ -320,7 +321,7 @@ export default function LandingPage() {
             />
 
             <div
-              className="phone-float relative z-10 w-[270px] bg-slate-900 rounded-[48px] p-3 shadow-2xl shadow-slate-900/40"
+              className="phone-float relative z-10 w-67.5 bg-slate-900 rounded-[48px] p-3 shadow-2xl shadow-slate-900/40"
               style={{
                 boxShadow:
                   "0 48px 96px rgba(15,23,42,.3),0 0 0 1px rgba(255,255,255,.08)",
@@ -373,7 +374,7 @@ export default function LandingPage() {
                         style={{ flex: idx < arr.length - 1 ? 1 : undefined }}
                       >
                         <div
-                          className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] flex-shrink-0 ${s.d ? "bg-blue-500 text-white" : s.a ? "bg-emerald-500 text-white" : "bg-slate-100 text-slate-400"}`}
+                          className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] shrink-0 ${s.d ? "bg-blue-500 text-white" : s.a ? "bg-emerald-500 text-white" : "bg-slate-100 text-slate-400"}`}
                         >
                           {s.i}
                         </div>
@@ -498,7 +499,7 @@ export default function LandingPage() {
             </div>
             <a
               href="#download"
-              className="flex-shrink-0 bg-slate-900 hover:bg-slate-700 text-white font-semibold px-6 py-3.5 rounded-2xl transition-all hover:-translate-y-0.5 shadow-md shadow-slate-900/20 text-sm whitespace-nowrap"
+              className="shrink-0 bg-slate-900 hover:bg-slate-700 text-white font-semibold px-6 py-3.5 rounded-2xl transition-all hover:-translate-y-0.5 shadow-md shadow-slate-900/20 text-sm whitespace-nowrap"
             >
               Start delivering today →
             </a>
@@ -699,7 +700,7 @@ export default function LandingPage() {
                     key={i}
                     className={`flex items-center gap-4 py-3.5 ${i < arr.length - 1 ? "border-b border-white/5" : ""}`}
                   >
-                    <div className="w-9 h-9 rounded-xl bg-white/8 flex items-center justify-center text-lg flex-shrink-0">
+                    <div className="w-9 h-9 rounded-xl bg-white/8 flex items-center justify-center text-lg shrink-0">
                       {item.icon}
                     </div>
                     <span className="text-white/80 text-sm font-medium">
@@ -719,7 +720,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-10 border-b border-white/5">
             <div className="col-span-2 md:col-span-1">
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-700 to-blue-500 flex items-center justify-center text-base">
+                <div className="w-8 h-8 rounded-xl bg-linear-to-br from-blue-700 to-blue-500 flex items-center justify-center text-base">
                   🚲
                 </div>
                 <span className="font-clash text-xl text-white">Swyft</span>
