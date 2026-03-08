@@ -229,13 +229,6 @@ export default function LandingPage() {
               </span>
             </div>
 
-            <div className="anim-fade inline-flex items-center gap-2 eco-badge rounded-full px-4 py-1.5 mb-8 ml-2">
-              <span className="text-lg">⚡</span>
-              <span className="text-blue-600 text-xs font-semibold">
-                100% Electric. Zero emissions across PH.
-              </span>
-            </div>
-
             <h1 className="font-clash text-5xl md:text-6xl lg:text-[68px] leading-[1.04] tracking-tight mb-6">
               <span className="anim-slide-1 block text-slate-900">
                 Clean delivery
