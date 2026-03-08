@@ -152,7 +152,7 @@ export default function LandingPage() {
           ))}
         </div>
         <a
-          href="#download"
+          href="https://expo.dev/artifacts/eas/dXyRpGPLApKzbrVYHjw4un.apk"
           className="bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all hover:-translate-y-0.5 border border-blue-500/40 shadow-lg shadow-blue-900/30"
         >
           Download App
@@ -236,7 +236,7 @@ export default function LandingPage() {
 
             <div className="flex flex-wrap gap-3 mb-12">
               <a
-                href="#download"
+                href="https://expo.dev/artifacts/eas/dXyRpGPLApKzbrVYHjw4un.apk"
                 className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white px-5 py-3.5 rounded-xl font-semibold transition-all hover:-translate-y-0.5 shadow-lg shadow-blue-900/40 border border-blue-500/40"
               >
                 <span className="text-xl">🤖</span>
@@ -589,7 +589,7 @@ export default function LandingPage() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="#"
+                  href="https://expo.dev/artifacts/eas/dXyRpGPLApKzbrVYHjw4un.apk"
                   className="inline-flex items-center gap-3 bg-black/25 hover:bg-black/40 border border-white/20 text-white px-5 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 font-semibold"
                 >
                   <span className="text-2xl">🤖</span>
