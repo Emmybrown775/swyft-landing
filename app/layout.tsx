@@ -19,9 +19,8 @@ export const metadata: Metadata = {
 
   // ── Core SEO ──────────────────────────────────────────────
   title: {
-    default:
-      "Swyft Logistics Port Harcourt – Delivery Services in Rivers State",
-    template: "%s | YourCompany Logistics Port Harcourt",
+    default: "Swyft Mobility Port Harcourt – Delivery Services in Rivers State",
+    template: "%s | Swyft Mobility Logistics Port Harcourt",
   },
   description:
     "Port Harcourt's trusted logistics company. We provide cheap eco-friendly, Logistics services across PortHarcourt Rivers State.",
