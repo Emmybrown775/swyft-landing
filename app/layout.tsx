@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "courier services Port Harcourt",
   ],
   authors: [{ name: "Swyft Mobility", url: BASE_URL }],
-  creator: "Swyft Monility",
+  creator: "Swyft Mobility",
 
   icons: {
     icon: "/favicon.png",
@@ -94,11 +94,39 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Swyft Mobility",
+    description:
+      "Electric bicycle delivery service in Port Harcourt, Rivers State.",
+    url: "https://bookswyft.com",
+    image: "https://bookswyft.com/website.png",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Port Harcourt",
+      addressRegion: "Rivers State",
+      addressCountry: "NG",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 4.8156,
+      longitude: 7.0498,
+    },
+    areaServed: "Port Harcourt",
+    priceRange: "₦",
+  };
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
         {children}
       </body>
     </html>
